@@ -1,28 +1,16 @@
-# Canal de chat
+# TRANSPILADORES
 
->> Consigna:
- 
-Añadiremos al proyecto un canal de chat (basado en websocket) entre el servidor y
-el cliente.
+>> Consigna: 
 
+Sobre el proyecto que venimos realizando, renombrar el archivo del servidor
+server.js a server.es6.js. Generar así mismo, otro archivo de servidor llamado server.ts donde se
+utilice el lenguaje Typescript para tipar ese módulo.
 >> Aspectos a incluir en el entregable:
 
-- En la parte inferior del formulario de ingreso se presentará el centro de mensajes
-almacenados en el servidor, donde figuren los mensajes de todos los usuarios identificados
-por su email.
-- El formato a representar será: email (texto negrita en azul) [fecha y hora (DD/MM/YYYY
-HH:MM:SS)](texto normal en marrón) : mensaje (texto italic en verde)
-- Además incorporar dos elementos de entrada: uno para que el usuario ingrese su email
-(obligatorio para poder utilizar el chat) y otro para ingresar mensajes y enviarlos mediante un
-botón.
-- Los mensajes deben persistir en el servidor en un archivo.
-
-Subir la app a glitch.com y probar la funcionalidad completa.
-Nota: agregar al package.json la clave siguiente
-"engines": {
-"node": ">=14.0.0",
-"npm": ">=6.0.0"
-}
-Esto permite que, al momento de configurar el proyecto, glitch instale una versión de node.js igual
-o superior a la versión 14 para permitir el uso del import de módulos (ES Modules) en el código del
-servidor.
+- Instalar Babel y Typescript como dependencias de desarrollo y crear dos script en el
+package.json llamados ServerES6toJS5 y ServerTStoJS5, que permitan lanzar los procesos
+automáticos de conversiones respectivas sobre los archivo del servidor creados (server.es6.js
+y server.ts) a JS5. Los archivos de salida en ambos casos se llamarán server.js.
+- Adecuar el proyecto y los módulos importados para permitir compatibilidades de importación
+y exportación.
+- Probar que el servidor funcione correctamente en ambos casos.
